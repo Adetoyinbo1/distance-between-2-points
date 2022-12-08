@@ -1,0 +1,36 @@
+<!-- Wappler include head-page="layouts/main" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="index" appConnect="local" components="{dmxValidator:{},dmxFormatter:{}}" -->
+<div class="container pt-5">
+    <div class="row">
+        <div class="col">
+            <form is="dmx-serverconnect-form" id="serverconnectform1" method="post" action="/api/distance">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group md-3"> <label for="input1" class="form-label">User one lat</label>
+                            <input type="text" class="form-control" id="input1" name="userone_lat" aria-describedby="input1_help" required="">
+                        </div>
+                        <div class="form-group md-3"> <label for="input2" class="form-label">User one long</label>
+                            <input type="text" class="form-control" id="input2" name="userone_long" aria-describedby="input1_help">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group md-3"> <label for="input3" class="form-label">User two lat</label>
+                            <input type="text" class="form-control" id="input3" name="usertwo_lat" aria-describedby="input3_help" required="">
+                        </div>
+                        <div class="form-group md-3"> <label for="input4" class="form-label">User two long</label>
+                            <input type="text" class="form-control" id="input4" name="usertwo_long" aria-describedby="input3_help" required="">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column pt-4">
+                        <h1 class="text-center" dmx-text="serverconnectform1.data.Validate.Distance.toNumber().ceil()+' km'" dmx-show="serverconnectform1.data.Validate.Distance">Fancy display heading</h1>
+                        <button id="btn1" class="btn btn-primary" type="submit">Get distance</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+
+
+    </div>
+</div>
+<meta name="ac:route" content="/">

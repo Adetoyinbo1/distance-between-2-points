@@ -1,0 +1,36 @@
+[
+    {
+        type: 'DistanceBetweenTwoPoints',
+        module: 'DistanceBetweenTwoPoints',
+        action: 'DistanceBetweenTwoPoints',
+        groupTitle: 'Location services',
+        groupIcon: 'fas fa-map-marker-alt comp-flow',
+        title: 'Distance Between Two Points @@var(name)@@',
+        icon: 'fas fa-map-marker-alt comp-files',
+        dataScheme: [
+            { name: 'Distance', type: 'text' }
+        ],
+        dataPickObject: true,
+        properties: [
+            {
+
+                group: 'Points',
+                variables: [
+                    { name: 'name', optionName: 'name', title: 'Name<sup style="color:red">*</sup>', type: 'text', required: true, defaultValue: 'compressImage' },
+
+                    { name: 'userOneLng', optionName: 'userOneLng', title: 'User One Longitude<sup style="color:red">*</sup>', type: 'text', required: true, serverDataBindings: true },
+
+                    { name: 'userOneLat', optionName: 'userOneLat', title: 'User One Latitude<sup style="color:red">*</sup>', type: 'text', required: true, serverDataBindings: true }
+
+                    { name: 'userTwoLng', optionName: 'userTwoLng', title: 'User Two Longitude<sup style="color:red">*</sup>', type: 'text', required: true, defaultValue: '', serverDataBindings: true },
+
+                    { name: 'userTwoLat', optionName: 'userTwoLat', title: 'User Two Latitude<sup style="color:red">*</sup>', type: 'text', required: true, defaultValue: '', serverDataBindings: true },
+
+
+                    { name: 'output', optionName: 'output', title: 'Output', type: 'boolean', defaultValue: false }
+
+                ]
+            }
+        ]
+    }
+]

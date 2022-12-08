@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "$_POST": [
+      {
+        "type": "text",
+        "name": "userone_lat"
+      },
+      {
+        "type": "text",
+        "name": "userone_long"
+      },
+      {
+        "type": "text",
+        "name": "usertwo_lat"
+      },
+      {
+        "type": "text",
+        "name": "usertwo_long"
+      }
+    ]
+  },
+  "exec": {
+    "steps": {
+      "name": "Validate",
+      "module": "DistanceBetweenTwoPoints",
+      "action": "DistanceBetweenTwoPoints",
+      "options": {
+        "userOneLng": "{{$_POST.userone_long}}",
+        "userTwoLng": "{{$_POST.usertwo_long}}",
+        "userOneLat": "{{$_POST.userone_lat}}",
+        "userTwoLat": "{{$_POST.usertwo_lat}}"
+      },
+      "meta": [
+        {
+          "name": "Distance",
+          "type": "text"
+        }
+      ],
+      "output": true
+    }
+  }
+}
